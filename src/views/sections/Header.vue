@@ -1,6 +1,6 @@
 <template>
   <header class="header" id="home">
-    <div id="particles-js"></div>
+    <vue-particles color="#dedede" id="particles-js"></vue-particles>
     <div class="header__wrapper">
       <div class="header__logo-box">
         <div class="header__logo"></div>
@@ -11,8 +11,10 @@
             Mateusz
             <span class="strong">Dominiak</span>
           </span>
-          <span id="typed-pl" class="typed"></span>
 
+          <vue-typed-js :strings="typedText.pl" :loop="true">
+            <span id="typed-pl" class="typing"></span>
+          </vue-typed-js>
           <span id="typed"></span>
           <span class="heading-primary--sub">Front-End Developer</span>
         </h1>
@@ -78,7 +80,13 @@
 
 <script>
 import { mapState } from "vuex";
+import { VueParticles } from "vue-particles";
+import { VueTypedJs } from "vue-typed-js";
 export default {
+  components: {
+    VueParticles,
+    VueTypedJs
+  },
   data() {
     return {
       projectsBtnText: {
@@ -88,6 +96,10 @@ export default {
       cvBtnText: {
         pl: "Pobierz CV",
         en: "Download CV"
+      },
+      typedText: {
+        pl: ["Zmotywowany...", "Gotowy do pracy..."],
+        en: ["Self-Taught...", "Never stop learning...", "Ready to work..."]
       }
     };
   },
@@ -236,7 +248,7 @@ export default {
   }
 }
 
-.typed {
+.typing {
   display: block;
   height: 2rem;
   font-size: 1.6rem;
