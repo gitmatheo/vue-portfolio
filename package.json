@@ -9,10 +9,13 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "gsap": "^2.1.2",
     "register-service-worker": "^1.6.2",
+    "scrollmagic": "^2.0.6",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "webpack": "^4.29.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
@@ -21,6 +24,7 @@
     "@vue/cli-service": "^3.5.0",
     "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.0.1",
+    "case-sensitive-paths-webpack-plugin": "^2.2.0",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "fibers": "^3.1.1",
